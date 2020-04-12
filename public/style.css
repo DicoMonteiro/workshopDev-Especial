@@ -1,0 +1,502 @@
+/*
+CSS
+
+Cascading StyleSheet
+
+*/
+
+/*
+
+ A organização no HTML são feitas como BOX, que fica uma dentro da outra ou organizada de um jeito por blocos,
+ separados horizontalmente ou verticalmente.
+
+ largura
+ bordas
+ espaçamentos
+ preenchimentos
+ 
+ posicionamentos
+
+ cores, fontes
+
+*/
+
+/* estruturar da melhor maneira o arquivo style.css colocando tudo no body em primeiro, depois as coisas globais
+depois as coisas especificas de cada id, class, elemento, etc */
+
+/* #intro head {
+    border-radius: 8px;
+
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1,0.5);
+} */
+
+body {
+    background: #e5e5e5;
+    color: #25282b;
+    /* text-align: center; */
+
+    margin: 0;
+
+    /* Font do Google para utilizar na stylle da página */
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body.hideScroll {
+    overflow: hidden;
+}
+
+/* GLOBAL Aplicando global em todos os elementos da página que contenha o dado abaixo */
+p, .description {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+/* .hide {
+    display: none;
+} */
+
+a {
+    color: #ff5E84;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.button {
+    color: white;
+    background: #ff5e84;
+
+    width: 150px;
+    height: 40px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Também da ideia de agrupamento de todas as bordas do botão terem a mesma dimensão */
+    border-radius: 8px;
+
+    /* Trabalhando com sombra no botão para refletir a solicitão do UI ou design, primeiro posicionamento é do
+    eixo X e o segundo do eixo Y, sendo horizontal e vertical, e depois */
+    box-shadow: 0px 8px 16px rgb(255, 0, 92, 0.5);
+}
+
+.button:hover {
+    background-color: #0984e3;
+    text-decoration: none;
+}
+
+/* #page-ideas nav li:last-child a {
+    /* color: white; */
+
+    /* font-size: 14px;
+    font-weight: bold; */
+
+    /* width: 150px;
+    height: 40px; */
+
+    /* background-color: #ff5E84; */
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    /* border-radius: 8px; */
+/* } */
+
+/* #page-ideas nav li:last-child a:hover {
+    background-color: #0984e3;
+    text-decoration: none;
+} */
+
+
+/* Padrões Aplicando em cada elemento específico da página */
+
+#container {
+    /* Passando a largura com percentagem e não como max-width, temos um ganho de que os dados não irão enconstar
+    na margem da página, nos dando um dimensionamento e preenchimento mais bacana e de ótima resolução 
+    para nossa página web */
+    width: 80%;
+    max-width: 980px;
+
+    /* Estes dados abaixo nos permite configurar como o id #container vai ser dimensionado dentro da página, então 
+    tudo que estiver dentro do #container vai seguir essa largura x altura, espacamento contendo ou não margens */
+    /* max-width: 980px;
+    margin-left: auto;
+    margin-right: auto; */
+
+    /* Realizou o agrupamento de dimensoes, defininndo o primeiro parametro como top e bottom, em cima e emabaixo, 
+    e o left e right sendo automatico */
+    margin: 40px auto;
+
+    display: flex;
+}
+
+#intro {
+    width: 300px;
+    margin-right: 64px;
+}
+
+main {
+    /* No margin ele pode ser definido em um unico elemento margin as quatro propriedades de top, bottom, left, right
+    sendo possível definir somente passando 2 elementos ou 4 elementos para definir essas dimensoes, realizando o agrupmaneto*/
+    margin: 32px 0;
+    /* margin-top: 32px; */
+    /* margin-bottom: 32px; */
+}
+
+#buttons {
+    display: flex;
+    /* O justify-content sendo space-evenly dar uns espaçamentos entre os elementos */
+    justify-content: space-evenly;
+
+    margin-bottom: 32px;
+}
+
+button {
+    background: none;
+    color: #ff5E84;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+
+/* p {
+    text-align: right;
+}  */
+
+
+/* #footer {
+    text-align: left;
+} */
+
+body img {
+
+}
+
+footer {
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+    color: #777;
+}
+
+footer a {
+    opacity: 0.7;
+}
+
+/* footer a {
+    color: #25282b;
+    text-decoration: underline;
+} */
+
+/* Hover da a sensação de quando passa o mouse por cima de um elemento, ele faz umas stylizacoes */
+/* footer a:hover {
+    color: #ff5E84;
+    font-weight: bold;
+} */
+
+.idea {
+    display: flex;
+
+    /* border: 1px solid red; */
+    background-color: #FFF;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1,0.5);
+
+    /* Padding serve para preencher os espaço, dando a sensação de estar maior
+    em relação a borda com o conteúdo dentro contendo por dimensão ou aplicando
+    de forma geral */
+    /* padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px; */
+    padding: 32px;
+
+    margin-bottom: 20px;
+}
+
+.idea img {
+    width: 60px;
+    height: 60px;
+
+    margin-right: 32px;
+}
+
+.idea h3 {
+    margin: 0;
+}
+
+.idea p {
+    margin: 8px 0;
+    color: #777;
+}
+
+.idea .description {
+    margin: 16px 0;
+}
+
+/* MODAL */
+
+#modal {
+    /* Posicionar todo modal para o tamanho da tela (página) a ser acessada
+    ao executar uma ação com o botão */
+    background: #ff5E84;
+    
+    /* position: absolute; */
+    position: fixed;
+    top: 0;
+
+    /* Pega o posiconamento de largura e altura para dimensionar a página */
+    /* width: 100vw;
+    height: 100vh; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+
+    /* Alinha pelo eixo Y */
+    /* align-items: center; */
+
+    /* Alinha pelo eixo X */
+    justify-content: center;
+}
+
+#modal.addScroll {
+    overflow: auto;
+}
+
+#modal .content {
+    /* margin-top: 128px; */
+    margin-top: 5%;
+
+    color: white;
+
+}
+
+#modal .content h1 {
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+#modal form {
+    width: 80%;
+
+    max-width: 800px;
+    
+    margin: 0 auto 15%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+/* Nesse exemplo abaixo, ele esta aplicando que o grid se expanda nas duas colunas
+nos filhos 3,4 e 5 (Link da Imagem, Digite uma descrição para essa ideia e Link da Ideia) */
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5) {
+    grid-column: span 2;
+}
+
+/* .input-wrapper {
+    margin: 16px;
+} */
+
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border-radius: 6px;
+
+    border: 1px solid rgba(141, 25, 5,0.5);
+    outline: none;
+
+    font-size: 16px;
+}
+
+form label {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form a {
+    background: #ffffff22;
+    color: white;
+
+    width: 150px;
+    height: 40px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    /* Alinhado ao display flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    /* Alinhado ao display grid */
+    align-self: end;
+
+    transition: 400ms;
+}
+
+form a:hover {
+    background: #FFF;
+    color: #ff5E84;
+
+    text-decoration: none;
+}
+
+form button {
+    background: white;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    margin-bottom: 16px;
+
+    /* Ajustando o botão para se posicionar na segunda coluna e ao final */
+    grid-column: 2;
+    justify-self: end;
+
+    transition: 400ms;
+
+}
+
+form button:hover {
+    background: #0984e3;
+    color: white;
+
+    text-decoration: none;
+}
+
+.hide {
+    display: none;
+}
+
+#modal.hide {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* IDEIAS.html */
+
+#page-ideas #container {
+    display: block;
+}
+
+#page-ideas header {
+    /* Display sendo flex, ele alinha uma ao lado do outro */
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideas header img{
+    /* Display sendo flex, ele alinha uma ao lado do outro */
+    width: 350px;
+    height: 150px;
+
+    opacity: 0.7;
+}
+
+#page-ideas nav {
+    display: flex;
+
+    align-items: center;
+}
+
+#page-ideas nav li {
+    list-style-type: none;
+    margin-right: 8px;
+}
+
+#page-ideas nav li a {
+    color: #25282b;
+}
+
+#page-ideas nav li a.button {
+    color:white;
+}
+
+#page-ideas nav li:last-child {
+    margin: 0;
+}
+
+section#title {
+    text-align: center;
+
+    margin: 64px 0;
+}
+
+section#title p {
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+section#ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    gap: 20px;
+}
+
+section#ideas .idea {
+    margin: 0;
+}
+
+section#ideas, 
+section#title,
+#page-ideas footer {
+    margin-top: 64px;
+}

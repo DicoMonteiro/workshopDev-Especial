@@ -1,0 +1,69 @@
+#page-ideas header {
+    /* Display sendo flex, ele alinha uma ao lado do outro */
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideas header img{
+    /* Display sendo flex, ele alinha uma ao lado do outro */
+    width: 350px;
+    height: 150px;
+
+    opacity: 0.7;
+}
+
+#page-ideas nav {
+    display: flex;
+
+    align-items: center;
+}
+
+#page-ideas nav li {
+    list-style-type: none;
+    margin-right: 8px;
+}
+
+#page-ideas nav li a {
+    color: #25282b;
+}
+
+#page-ideas nav li a.button {
+    color:white;
+}
+
+#page-ideas nav li:last-child {
+    margin: 0;
+}
+
+section#title {
+    text-align: center;
+
+    margin: 64px 0;
+}
+
+section#title p {
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+section#ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    gap: 20px;
+}
+
+section#ideas .ideias {
+    margin: 0;
+}
+
+section#ideas, 
+section#title,
+#page-ideas footer {
+    margin-top: 64px;
+}
